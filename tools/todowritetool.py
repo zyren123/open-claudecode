@@ -4,7 +4,7 @@ import json
 import uuid
 
 @tool
-def todo_write_tool(todos: Annotated[List[Dict[str, Any]], "The updated todo list"]) -> Dict[str, Any]:
+def todo_write_tool(todos: Annotated[List[Dict[str, Any]], "Array of todo items. Each item must have: content (non-empty string), status (pending/in_progress/completed), priority (high/medium/low), and id (string). No additional properties allowed."]) -> Dict[str, Any]:
     """
     Use this tool to create and manage a structured task list for your current coding session. This helps you track progress, organize complex tasks, and demonstrate thoroughness to the user.
     It also helps the user understand the progress of the task and overall progress of their requests.
