@@ -1,0 +1,5 @@
+*.pyc
+*.env
+*.cursor
+models.json
+query_models.py
