@@ -17,7 +17,9 @@ async def mainloop():
     print_welcome()
     
     while True:
+        print("-" * 50)
         user_input=input("You: ")
+        print("-" * 50)
         if user_input.lower() in ["exit","quit","bye","q"]:
             print("👋 Goodbye!")
             break
