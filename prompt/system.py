@@ -14,6 +14,7 @@ class SystemPromptParams:
     os_version: str
     todays_date: str
     model_name: Optional[str] = None
+    base_url: Optional[str] = None
     
     def __str__(self) -> str:
         """美化打印系统参数"""
@@ -25,6 +26,7 @@ class SystemPromptParams:
 │ OS Version         : {self.os_version}
 │ Date               : {self.todays_date}
 │ Model              : {self.model_name or 'Sonnet 4'}
+│ Base URL            : {self.base_url}
 ╰─────────────────────────╯
 """
 
@@ -184,6 +186,7 @@ default_params = SystemPromptParams(
     os_version=os.uname().release,
     todays_date=datetime.now().strftime('%Y-%m-%d'),
     model_name=model_config.model,
+    base_url=model_config.base_url,
 )
 
 main_agent_system_prompt: str = create_main_agent_system_prompt(default_params)
