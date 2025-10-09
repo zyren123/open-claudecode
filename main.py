@@ -8,7 +8,7 @@ def print_welcome():
     print("🚀 OpenClaudeCode - AI Coding Assistant")
     print("=" * 50)
     print(default_params)
-    print("💡 输入 'exit', 'quit', 'bye', 或 'q' 退出程序")
+    print("💡 输入 'exit', 'quit', 'bye', 或 'q' 退出程序\n")
     print("-" * 50)
 
 agent=ReactAgent(is_main=True)
